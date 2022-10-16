@@ -1,3 +1,18 @@
 <h1>Horror</h1>
-<div class="slide-image" *ngFor="let item of books">
-<div><img src="{{item.images}}" alt="[{{item.type}}"></div>
+<div class="books_card">
+    <div *ngFor="let book of horror_books">
+        <div class="book-zone">
+            <img src="{{book.images}}" alt="[{{book.type}}">
+        </div>
+    </div>
+</div>
+<h1>Fantasy</h1>
+<div class="books_card">
+    <div *ngFor="let book of fantasy_books">
+        <div class="book-zone">
+            <img src="{{book.images}}" alt="[{{book.type}}">
+        </div>
+    </div>
+</div>
+
+

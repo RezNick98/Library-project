@@ -11,8 +11,8 @@ img{
     border-bottom: solid;
     padding-bottom:15px ;
 }
-p{
+.text-warning{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    width: 200px;
+    text-transform: uppercase;
 }

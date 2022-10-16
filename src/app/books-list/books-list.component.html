@@ -2,16 +2,22 @@
 <div class="books_card">
     <div *ngFor="let book of horror_books">
         <div class="book-zone">
+            <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="[{{book.type}}">
         </div>
+        <p class="text-warning bg-dark" *ngIf="book.available==false">
+            Product no available in the country</p>
     </div>
 </div>
 <h1>Fantasy</h1>
 <div class="books_card">
     <div *ngFor="let book of fantasy_books">
         <div class="book-zone">
+            <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="[{{book.type}}">
         </div>
+        <span class="text-warning bg-dark" *ngIf="book.available==false">
+            Product no available in the country</span>
     </div>
 </div>
 

@@ -1,9 +1,18 @@
 img{
     width:200px;
     height: 300px;
-    padding: 15px;
+
 }
+
 
 .books_card{
     display: flex;
+    justify-content:space-between ;
+    border-bottom: solid;
+    padding-bottom:15px ;
+}
+p{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }

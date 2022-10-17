@@ -7,7 +7,7 @@ import { WeekBook } from './WeekBooks';
   styleUrls: ['./week-books.component.scss']
 })
 export class WeekBooksComponent implements OnInit {
-  week_books:WeekBook[]=[
+  weekBooks:WeekBook[]=[
     {
       name:"IT",
       images:"assets/images/Weeks_offer/it_pb.jpg",

@@ -1,7 +1,8 @@
 <h1>Books of the week</h1>
 <div class="week-books">
-    <div *ngFor="let weekBook of week_books">
+    <div *ngFor="let weekBook of weekBooks">
         <p>{{weekBook.name}}</p>
         <img src="{{weekBook.images}}" alt="">
+        <div class="text-bg-warning p-3">Offer valid until {{weekBook.offer_until|date:'longDate'}}</div>
     </div>
 </div>

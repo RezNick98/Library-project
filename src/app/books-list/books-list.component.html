@@ -14,7 +14,7 @@
     <div *ngFor="let book of fantasy_books">
         <div class="book-zone">
             <p>{{book.name}}</p>
-            <img src="{{book.images}}" alt="[{{book.type}}">
+            <img src="{{book.images}}" alt="{{book.type}}">
         </div>
         <span class="text-warning bg-dark" *ngIf="book.available==false">
             product no available in the country</span>

@@ -9,13 +9,13 @@ import { Book } from './Book';
 export class BooksListComponent implements OnInit {
   horror_books:Book[]=[
     {
-      name:"Pet Sementary",
+      name:"Pet Sematary",
     type:"horror",
     images:"assets/images/Horror/images.jpg",
     available:true,
   },
   {
-    name:"Tales Horror",
+    name:"Tales Of Horror",
     type:"horror",
     images:"assets/images/Horror/tales_horror.jpg",
     available:true,

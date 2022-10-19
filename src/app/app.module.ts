@@ -8,6 +8,8 @@ import { WeekBooksComponent } from './week-books/week-books.component';
 import { LibraryBooksComponent } from './library-books/library-books.component';
 import { LibraryProductsComponent } from './library-products/library-products.component';
 import { LibraryAboutComponent } from './library-about/library-about.component';
+import { FormsModule } from '@angular/forms';
+import { NumberProductsComponent } from './number-products/number-products.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { LibraryAboutComponent } from './library-about/library-about.component';
     WeekBooksComponent,
     LibraryBooksComponent,
     LibraryProductsComponent,
-    LibraryAboutComponent
+    LibraryAboutComponent,
+    NumberProductsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

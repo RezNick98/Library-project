@@ -1,0 +1,9 @@
+<div id="products">
+        <img src={{products.images}} alt="">
+        <p>price: {{products.price}}</p>
+        <div class="input_zone">
+            <button class="btn btn-primary btn-sm" (click)="downQuantity(products)">-</button>
+            <input type="number" [(ngModel)]="products.quantity">
+            <button class="btn btn-primary btn-sm" (click)="upQuantity(products)">+</button>
+        </div>
+</div>

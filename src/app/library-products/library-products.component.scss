@@ -1,0 +1,23 @@
+#products{
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+img{
+    height: 250px;
+    width: 250px;
+    padding: 20px;
+    margin: 30px;
+}
+p{
+    text-align: center;
+}
+button{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.input_zone{
+    display: flex;
+    justify-content: center;
+}

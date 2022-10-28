@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { BooksListComponent } from './books-list/books-list.component';
 import { WeekBooksComponent } from './week-books/week-books.component';
 import { LibraryBooksComponent } from './library-books/library-books.component';
-import { LibraryProductsComponent } from './library-products/library-products.component';
 import { LibraryAboutComponent } from './library-about/library-about.component';
 import { FormsModule } from '@angular/forms';
-import { NumberProductsComponent } from './number-products/number-products.component';
+import { LibraryWishlistComponent } from './library-wishlist/library-wishlist.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +16,8 @@ import { NumberProductsComponent } from './number-products/number-products.compo
     BooksListComponent,
     WeekBooksComponent,
     LibraryBooksComponent,
-    LibraryProductsComponent,
     LibraryAboutComponent,
-    NumberProductsComponent
+    LibraryWishlistComponent
   ],
   imports: [
     BrowserModule,

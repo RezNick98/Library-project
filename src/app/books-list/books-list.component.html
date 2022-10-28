@@ -16,6 +16,7 @@
             <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="{{book.type}}">
         </div>
+        <span *ngIf="book.available==true"><button type="button" class="btn btn-light">Add to Wishlist\</button></span>
         <span class="text-warning bg-dark" *ngIf="book.available==false">
             product no available in the country</span>
     </div>

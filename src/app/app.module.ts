@@ -10,7 +10,7 @@ import { LibraryAboutComponent } from './library-about/library-about.component';
 import { FormsModule } from '@angular/forms';
 import { LibraryWishlistComponent } from './library-wishlist/library-wishlist.component';
 import { InputWishlistComponent } from './input-wishlist/input-wishlist.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { InputWishlistComponent } from './input-wishlist/input-wishlist.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

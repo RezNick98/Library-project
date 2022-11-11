@@ -8,8 +8,6 @@ import { WeekBooksComponent } from './week-books/week-books.component';
 import { LibraryBooksComponent } from './library-books/library-books.component';
 import { LibraryAboutComponent } from './library-about/library-about.component';
 import { FormsModule } from '@angular/forms';
-import { LibraryWishlistComponent } from './library-wishlist/library-wishlist.component';
-import { InputWishlistComponent } from './input-wishlist/input-wishlist.component';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
@@ -18,8 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
     WeekBooksComponent,
     LibraryBooksComponent,
     LibraryAboutComponent,
-    LibraryWishlistComponent,
-    InputWishlistComponent,
   ],
   imports: [
     BrowserModule,

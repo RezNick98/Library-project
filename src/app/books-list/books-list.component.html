@@ -1,11 +1,11 @@
 <h1>List of books</h1>
 <div class="books_card">
-    <div *ngFor="let book of books"[ngClass]="{'wishlist':book.wishbutton}">
+    <div *ngFor="let book of books">
         <div class="book-zone">
             <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="{{book.type}}">
         </div>
-        <button *ngIf="book.available==true && book.wishbutton==false" type="button" class="btn btn-light" (click)="addToWishlist(book)">Add to wishlist</button>
+        <button type="button" class="btn btn-light" *ngIf="book.wishbutton==false && book.available==true">Light</button>
         <p class="text-warning bg-dark" *ngIf="book.available==false">
             product no available in the country</p>
     </div>

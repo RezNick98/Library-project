@@ -5,7 +5,6 @@
             <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="{{book.type}}">
         </div>
-        <button type="button" class="btn btn-light" *ngIf="book.wishbutton==false && book.available==true">Light</button>
         <p class="text-warning bg-dark" *ngIf="book.available==false">
             product no available in the country</p>
     </div>

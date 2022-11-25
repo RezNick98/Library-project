@@ -5,6 +5,7 @@
             <p>{{book.name}}</p>
             <img src="{{book.images}}" alt="{{book.type}}">
         </div>
+        <app-wishlist-button [books]="book" *ngIf="book.wishbutton==false && book.available==true"></app-wishlist-button>
         <p class="text-warning bg-dark" *ngIf="book.available==false">
             product no available in the country</p>
     </div>

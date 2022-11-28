@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { BooksDataService } from '../books-data.service';
 import { Book } from '../books-list/Book';
 
 @Component({
@@ -10,13 +11,16 @@ export class WishlistButtonComponent implements OnInit {
   constructor() { }
 
   @Input()
-  books!:Book;
+  wishbutton!: boolean;
+  @Output()
+  wishbuttonChange:EventEmitter<boolean>=new EventEmitter<boolean>()
   
   ngOnInit(): void {
   }
   
-  addToWishList(books:Book):void{
-    books.wishbutton=true;
-    console.log(books.wishbutton)
+  addToWishList():void{
+    this.wishbutton=true;
+    this.wishbuttonChange.emit(this.wishbutton);
+    console.log(this.wishbutton)
   } 
 }

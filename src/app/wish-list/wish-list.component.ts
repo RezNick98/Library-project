@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { observable } from 'rxjs';
+import { Book } from '../books-list/Book';
+import { WishListService } from '../wish-list.service';
 
 
 @Component({
@@ -8,7 +11,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishListComponent implements OnInit {
 
-  constructor() { }
+  wishlist:Book[]=[];
+  constructor(private wishListService:WishListService) { 
+    wishListService.wishlist.subscribe(observable=>this.wishlist=observable)
+  }
 
   ngOnInit(): void {
   }

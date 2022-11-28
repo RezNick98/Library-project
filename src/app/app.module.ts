@@ -10,7 +10,6 @@ import { LibraryAboutComponent } from './library-about/library-about.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { WishListComponent } from './wish-list/wish-list.component';
-import { WishlistButtonComponent } from './wishlist-button/wishlist-button.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +18,6 @@ import { WishlistButtonComponent } from './wishlist-button/wishlist-button.compo
     LibraryBooksComponent,
     LibraryAboutComponent,
     WishListComponent,
-    WishlistButtonComponent,
   ],
   imports: [
     BrowserModule,

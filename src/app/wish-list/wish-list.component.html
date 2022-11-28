@@ -1,1 +1,8 @@
-<p>wish-list works!</p>
+<h3>Wishlist</h3>
+<div *ngFor="let item of wishlist">
+    <div class="book-zone">
+        <p>{{item.name}}</p>
+        <img src="{{item.images}}" alt="{{item.type}}">
+    </div>
+
+</div>

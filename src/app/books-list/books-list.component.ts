@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BooksDataService } from '../books-data.service';
+import { WishListService } from '../wish-list.service';
 import { Book } from './Book';
 
 @Component({
@@ -8,9 +9,10 @@ import { Book } from './Book';
   styleUrls: ['./books-list.component.scss']
 })
 export class BooksListComponent implements OnInit {
-  books:Book[]=[];
+  books:Book[]=[ ]
 
-  constructor(private booksDataService:BooksDataService) {
+  constructor(private booksDataService:BooksDataService, 
+    private wishListService:WishListService) {
   }
 
   
@@ -18,6 +20,17 @@ export class BooksListComponent implements OnInit {
     this.booksDataService.getAll()
     .subscribe(books=>this.books=books)
   }
+
+  addToWishList(books:Book):void{
+    this.wishListService.addToWishList(books)
+    books.wishbutton=true
+    
+  }
+
+  removeFromWishList(books:Book):void{
+
+  }
+
 
 
 }

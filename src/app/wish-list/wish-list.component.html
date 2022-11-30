@@ -4,5 +4,5 @@
         <p>{{item.name}}</p>
         <img src="{{item.images}}" alt="{{item.type}}">
     </div>
-
+    <button type="button" class="btn btn-light" *ngIf="item.wishbutton==true" (click)="removeFromWishlist(item)">Remove from Wishlist</button>
 </div>

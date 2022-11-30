@@ -9,7 +9,7 @@ import { Book } from './Book';
   styleUrls: ['./books-list.component.scss']
 })
 export class BooksListComponent implements OnInit {
-  books:Book[]=[ ]
+  books:Book[]=[]
 
   constructor(private booksDataService:BooksDataService, 
     private wishListService:WishListService) {
@@ -19,16 +19,12 @@ export class BooksListComponent implements OnInit {
   ngOnInit(): void {
     this.booksDataService.getAll()
     .subscribe(books=>this.books=books)
+
   }
 
   addToWishList(books:Book):void{
     this.wishListService.addToWishList(books)
     books.wishbutton=true
-    
-  }
-
-  removeFromWishList(books:Book):void{
-
   }
 
 

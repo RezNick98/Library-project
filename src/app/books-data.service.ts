@@ -13,6 +13,12 @@ export class BooksDataService {
     return this.http.get<Book[]>(URL);
   }
 
+  public add(books:Book):void{
+    this.http.put(URL,books.wishbutton=true)
+  }
 
-  
+  public remove(books:Book):void{
+    this.http.delete(URL+'/:'+books.id);
+    
+  }  
 }

@@ -24,7 +24,7 @@ export class BooksListComponent implements OnInit {
 
   addToWishList(books:Book):void{
     this.wishListService.addToWishList(books)
-    books.wishbutton=true
+    this.booksDataService.add(books)
   }
 
 

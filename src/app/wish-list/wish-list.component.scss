@@ -1,0 +1,23 @@
+img{
+    width:200px;
+    height: 300px;
+    padding: 10px;
+}
+h1{
+  text-align: center;
+  padding: 20px 0px;
+}
+
+
+.books_card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+    border-bottom: solid;
+
+}
+.book-zone{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+}

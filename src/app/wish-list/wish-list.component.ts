@@ -11,17 +11,20 @@ import { WishListService } from '../wish-list.service';
 })
 export class WishListComponent implements OnInit {
 
-  wishlist:Book[]=[];
+  wishlist:Book[]=[
+
+  ];
   constructor(private wishListService:WishListService) { 
     wishListService.wishlist.subscribe(observable=>this.wishlist=observable)
   }
 
   ngOnInit(): void {
+    this.wishListService.getAll()
+    .subscribe(books=> this.wishlist=books);
   }
 
   removeFromWishlist(books:Book):void{
-    this.wishListService.removeFromWishList(books)
-    books.wishbutton=false;
+    this.wishListService.removeFromWishList(books).subscribe()
   }
 
 }

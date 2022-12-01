@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import {Book} from './books-list/Book';
 const URL = 'https://6362a22766f75177ea34b028.mockapi.io/Books';
 @Injectable({
@@ -13,12 +13,7 @@ export class BooksDataService {
     return this.http.get<Book[]>(URL);
   }
 
-  public add(books:Book):void{
-    this.http.put(URL,books.wishbutton=true)
+  public add(books:Book):Observable<Book>{
+    return this.http.put<Book>(URL,books.wishbutton=false)
   }
-
-  public remove(books:Book):void{
-    this.http.delete(URL+'/:'+books.id);
-    
-  }  
 }

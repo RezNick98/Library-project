@@ -1,7 +1,7 @@
 import { Type } from "@angular/compiler";
 
 export interface Book{
-    id?:number
+    id?:String
     name:String
     type:string
     images:string

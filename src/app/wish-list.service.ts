@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Book } from './books-list/Book';
 import { BooksDataService } from './books-data.service';
+const URL='https://6362a22766f75177ea34b028.mockapi.io/wishlist'
 
 @Injectable({
   providedIn: 'root'
@@ -15,17 +16,17 @@ export class WishListService {
   constructor(private booksDataService:BooksDataService,
     private http:HttpClient) { }
 
-
-  addToWishList(books:Book){
-    this.booksDataService.add(books)
-    this._wishlist.push(books);
-    console.log(this._wishlist.length);
-    this.wishlist.next(this._wishlist);
-
+    public getAll():Observable<Book[]>{
+      return this.http.get<Book[]>(URL);
+    }
+  public addToWishList(books:Book):Observable<Book>{
+    let item =  this.http.post<Book>(URL,books)
+    this.http.put<Book>(URL,books.wishbutton=true);
+    return item
   }
 
-  removeFromWishList(books:Book){
-    this.booksDataService.remove(books)
-    this._wishlist.pop()
+
+  removeFromWishList(books:Book):Observable<Book>{
+    return this.http.delete<Book>(URL+'/'+books.id);
   }
 }

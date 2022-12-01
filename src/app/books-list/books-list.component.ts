@@ -11,6 +11,7 @@ import { Book } from './Book';
 export class BooksListComponent implements OnInit {
   books:Book[]=[]
 
+
   constructor(private booksDataService:BooksDataService, 
     private wishListService:WishListService) {
   }
@@ -18,15 +19,15 @@ export class BooksListComponent implements OnInit {
   
   ngOnInit(): void {
     this.booksDataService.getAll()
-    .subscribe(books=>this.books=books)
+    .subscribe(books=>this.books=books);
 
+    
   }
 
   addToWishList(books:Book):void{
-    this.wishListService.addToWishList(books)
-    this.booksDataService.add(books)
+    this.booksDataService.add(books).subscribe();
+    this.wishListService.addToWishList(books).subscribe();
   }
-
 
 
 }

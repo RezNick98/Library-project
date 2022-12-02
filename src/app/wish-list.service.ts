@@ -21,12 +21,16 @@ export class WishListService {
     }
   public addToWishList(books:Book):Observable<Book>{
     let item =  this.http.post<Book>(URL,books)
-    this.http.put<Book>(URL,books.wishbutton=true);
     return item
   }
 
 
   removeFromWishList(books:Book):Observable<Book>{
-    return this.http.delete<Book>(URL+'/'+books.id);
+    this.http.put<Book>(URL,books.name='')
+    this.http.put<Book>(URL,books.type='')
+    this.http.put<Book>(URL,books.images='')
+    this.http.put<Book>(URL,books.wishbutton=false)
+
+    return this.http.delete<Book>(URL+'/'+books.id)
   }
 }

@@ -1,3 +1,4 @@
+
 import { Component, Input, OnInit } from '@angular/core';
 import { BooksDataService } from '../books-data.service';
 import { WishListService } from '../wish-list.service';
@@ -10,7 +11,6 @@ import { Book } from './Book';
 })
 export class BooksListComponent implements OnInit {
   books:Book[]=[]
-
 
   constructor(private booksDataService:BooksDataService, 
     private wishListService:WishListService) {
@@ -25,7 +25,7 @@ export class BooksListComponent implements OnInit {
   }
 
   addToWishList(books:Book):void{
-    this.booksDataService.add(books).subscribe();
+    this.booksDataService.changeWishbuttonValue(books).subscribe;
     this.wishListService.addToWishList(books).subscribe();
   }
 

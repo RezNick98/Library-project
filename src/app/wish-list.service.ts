@@ -30,7 +30,6 @@ export class WishListService {
     this.http.put<Book>(URL,books.type='')
     this.http.put<Book>(URL,books.images='')
     this.http.put<Book>(URL,books.wishbutton=false)
-
     return this.http.delete<Book>(URL+'/'+books.id)
   }
 }
